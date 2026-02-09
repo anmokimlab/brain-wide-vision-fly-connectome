@@ -26,7 +26,7 @@ The analysis pipeline is a hybrid of **MATLAB** and **Python**.
 
 ### MATLAB Requirements
 * Statistics and Machine Learning Toolbox
-* 
+  
 
 ## Data Access
 Neural data and synapse coordinates are accessed via the [FlyWire Codex](https://codex.flywire.ai/). 
