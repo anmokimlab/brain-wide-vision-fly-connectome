@@ -16,7 +16,7 @@ The code facilitates the classification of projection neurons into Feedforward (
 * **Visual Field Inference:** Estimation of Receptive Fields (RF) and Projective Fields (PF) from synaptic densities.
 
 ## Prerequisites
-The pipeline is a hybrid of **MATLAB** and **Python**.
+The analysis pipeline is a hybrid of **MATLAB** and **Python**.
 
 ### Python Dependencies
 * `fafbseg`
@@ -29,7 +29,7 @@ The pipeline is a hybrid of **MATLAB** and **Python**.
 * 
 
 ## Data Access
-Neural data and synapse coordinates are accessed via the [FlyWire Codex](https://codex.flywire.ai/). Users must provide their own `FlyWire API token` for data retrieval.
+Neural data and synapse coordinates are accessed via the [FlyWire Codex](https://codex.flywire.ai/). 
 
 ## Usage
 1. **Classification:** Run `polarity_classification.py` to categorize neurons into FF, FB, and BD groups.
