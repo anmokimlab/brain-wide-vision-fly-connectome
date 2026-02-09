@@ -3,17 +3,17 @@
 Source code for the manuscript on the connectome analysis for the brain-wide vision in Drosophila.
 
 ## Overview
-This repository contains the analysis pipeline used to characterize the long-range projections linking the **Optic Lobe (OL)** and **Central Brain (CB)** using the FAFB-FlyWire (v783) dataset. 
+This repository contains the analysis pipeline used to characterize the long-range projections linking the **optic lobe (OL)** and **central brain (CB)** using the FAFB-FlyWire (v783) dataset. 
 
 The code facilitates the classification of projection neurons into feedforward projection (FFP), feedback projection (FBP), and bilateral projection (BLP) streams based on synaptic polarity and connectivity.
 
 
 
 ## Key Analysis Modules
-* **Synaptic Polarity:** Calculation of Directionality ($D$) and Spatial Bias ($B$) indices from synaptic coordinate distributions.
-* **FF Modular Clustering:** Modularity-based community detection (Leiden) to identify functional superclusters in the CB.
-* **Recurrent Loop Mapping:** Analysis of layer-specific reciprocity between FB outputs and disynaptic visual inputs.
-* **Visual Field Inference:** Estimation of Receptive Fields (RF) and Projective Fields (PF) from synaptic densities.
+* **Synaptic Polarity:** Calculation of directionality ($D$) and spatial bias ($B$) indices from synaptic coordinate distributions.
+* **FF Modular Clustering:** Modularity-based community detection (Leiden) to identify functional superclusters in the central brain.
+* **Recurrent Loop Mapping:** Analysis of layer-specific reciprocity between FBP outputs and disynaptic visual inputs.
+* **Visual Field Inference:** Estimation of receptive fields (RF) and projective fields (PF) from synaptic densities.
 
 ## Prerequisites
 The analysis pipeline is a hybrid of **MATLAB** and **Python**.
