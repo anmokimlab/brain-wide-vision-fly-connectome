@@ -5,7 +5,7 @@ Source code for the manuscript on the connectome analysis for the brain-wide vis
 ## Overview
 This repository contains the analysis pipeline used to characterize the long-range projections linking the **Optic Lobe (OL)** and **Central Brain (CB)** using the FAFB-FlyWire (v783) dataset. 
 
-The code facilitates the classification of projection neurons into Feedforward (FF), Feedback (FB), and Bilateral (BL) streams based on synaptic polarity and connectivity logic.
+The code facilitates the classification of projection neurons into feedforward projection (FFP), feedback projection (FBP), and bilateral projection (BLP) streams based on synaptic polarity and connectivity.
 
 
 
