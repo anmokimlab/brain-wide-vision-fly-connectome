@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Secrets
+**/.neuprint_token
+
+# Large generated / downloaded data (regenerate with the pipeline scripts)
+src/Codex_Data/*
+!src/Codex_Data/.gitkeep
+src/MCNS/MCNS_Data/*
+!src/MCNS/MCNS_Data/.gitkeep
