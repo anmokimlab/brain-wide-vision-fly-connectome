@@ -63,7 +63,7 @@ histogram(Type_to_Neuron_Count.GroupCount, 'BinWidth', 1, 'Normalization', 'coun
 xlim([0 40]);
 set(gca, 'XScale', 'linear', 'TickDir', 'out'); grid on;
 xlabel('Number of FFP Types');
-ylabel('Cumulative Probability');
+ylabel('Number of CB neurons');
 title('Count (Type-to-Neuron Level)');
 
 

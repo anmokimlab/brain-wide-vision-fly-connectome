@@ -292,7 +292,6 @@ Leiden clustering (Python), then render the figures (MATLAB).
    - `leiden_post_right_FFP_CB_no_VPN_thr0_100000.csv` — post-column cluster assignments
    - `leiden_right_FFP_intercluster_connectivity_CB_no_VPN_thr0_resol3_100000.csv` — inter-cluster connectivity
    - `dendrogram_raw_CB_no_VPN_thr0_resol3_100000.csv` — raw-similarity dendrogram (linkage matrix)
-   - `edge_switching_modularity_output.csv` — edge-switching modularity null distribution
 
 3. **Render the figures** — run `Figures\fig_3C_D_E_F_G_FFP_clustering_plot.m`. It
    loads the s08/s09 outputs above plus the Codex tables
@@ -458,7 +457,7 @@ classification, s10).
 
 Finally, run `Figures\fig_4E_FBP_layer.m`. It loads both `.mat` files and, for each
 optic lobe, renders one RGB image whose columns are per-FBP-type triplets — upstream
-input ipsi (green) · FBP output (orange) · upstream input contra (blue) — stacked over
+input ipsi (blue) · FBP output (orange) · upstream input contra (green) — stacked over
 the innervation-depth axis. The three optic-lobe images (ME / LO / LOP) are the panels
 **4E** and **S2D**.
 
@@ -1293,8 +1292,8 @@ Three figure scripts then load the two `.mat` files from steps 2–3:
 
 - `MCNS/Figures/fig_4S_FBP_layer_figure.m` (the MCNS analogue of the FAFB `fig_4E_FBP_layer.m`)
   also loads `right_neurons_thr0.mat` and, for each optic lobe (ME / LO / LOP), renders one RGB
-  image whose columns are per-FBP-type triplets — upstream input ipsilateral (green) · FBP output
-  (orange) · upstream input contralateral (blue) — stacked over the innervation-depth axis
+  image whose columns are per-FBP-type triplets — upstream input ipsilateral (blue) · FBP output
+  (orange) · upstream input contralateral (green) — stacked over the innervation-depth axis
   (Figures 1–3).
 - `MCNS/Figures/fig_4B_FBP_layer_overall_histogram.m` (the MCNS analogue of the FAFB
   `fig_4F_FBP_layer_overall_histogram.m`) collapses all FBP types into a single mean ± 1 SD profile
@@ -1402,8 +1401,10 @@ Common prerequisites (required inputs not produced by the s-scripts below):
    `MCNS/Data_Processing/s15_FAFB_MCNS_Mi1_matching.ipynb` (requires `neuprint-python`, `fafbseg`,
    `navis`, and a neuprint token). For each neuprint Mi1 it fetches the skeleton, finds the FlyWire
    Mi1 with the smallest directed-mean-nearest skeleton distance, and writes
-   `neuprint-mi1-to-flywire-v783-directed-mean-nearest-skeleton-matches.csv` (the only saved output)
-   to `MCNS/Processed_Data/`.
+   `neuprint-mi1-to-flywire-v783-directed-mean-nearest-skeleton-matches.csv` — the match table read
+   downstream by `s16` — to `MCNS/Processed_Data/` (its default `output_dir`). It writes a few
+   bookkeeping files alongside it (per-side skeleton summaries, a skeleton-node `.npz`, and
+   fetch-issue CSVs); only the matches CSV is needed downstream.
 
 2. **Build the Mi1 / Tm3 / T4a reference columns** — run
    `MCNS/Data_Processing/s16_Mi1_Tm3_T4a_matching.m` (the MCNS analogue of the FAFB

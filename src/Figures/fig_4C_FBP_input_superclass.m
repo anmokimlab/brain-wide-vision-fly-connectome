@@ -369,26 +369,6 @@ end
 
 plotStackedSelectedBar(dataList, selected, SelectedColors);
 
-%% Mean + std of the central-reassigned input superclass across all FBP types
-n_superclass = length(FAFB_Superclass);
-n_neurons = height(RightFBP_type);
-all_ratios = zeros(n_neurons, n_superclass); % normalized ratio per neuron
-
-for i = 1:n_neurons
-    temp = cell2mat(RightFBP_type.input_superclass2{i}.syn_count);
-    temp = temp / sum(temp); % normalize
-    all_ratios(i, :) = temp;
-end
-
-% Mean and standard deviation
-mean_input_superclass = mean(all_ratios, 1);
-std_input_superclass = std(all_ratios, 0, 1); % 0: normalize by N-1
-
-% Store as a table (optional)
-Total_FBP_input_superclass = [FAFB_Superclass num2cell(mean_input_superclass') num2cell(std_input_superclass')];
-Total_FBP_input_superclass.Properties.VariableNames = {'superclass', 'mean_ratio', 'std_ratio'};
-
-
 %% Local function
 function plotStackedSelectedBar(dataList, selectedLabels, colors)
     % dataList:       cell array of containers.Map objects (or a struct array)

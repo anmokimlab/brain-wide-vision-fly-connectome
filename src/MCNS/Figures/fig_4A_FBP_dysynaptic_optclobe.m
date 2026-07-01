@@ -282,7 +282,6 @@ function [upstreamNeurons] = seeConnection_root_id_NoOptic(Want_root_ids,MCNSCon
 idx=ismember(MCNSConnections.post_root_id,Want_root_ids);
 upstreamConnection=MCNSConnections(idx,:);
 opticlobes={'LA(R)','AME(R)','ME(R)','LO(R)','LOP(R)','LA(L)','AME(L)','ME(L)','LO(L)','LOP(L)'};
-TotalInSynapse=sum(upstreamConnection.syn_count);
 upstreamConnection(ismember(upstreamConnection.neuropil,opticlobes),:)=[];
 
 [upstreamNeurons,~,ic]=unique(upstreamConnection.pre_root_id);

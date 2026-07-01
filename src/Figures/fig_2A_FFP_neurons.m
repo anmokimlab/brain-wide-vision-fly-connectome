@@ -16,8 +16,9 @@ neuropilColor = [0.7 0.7 0.7];
 neuropilAlpha = 0.05;
 
 % Foreground (Neuron) settings
-% Neuron meshes are downloaded by Data_Processing/s03_FFP_FBP_mesh.ipynb.
-% Switch this folder to plot each group: 'fig2a_neuron_mesh_FFP' or 'fig2a_neuron_mesh_FBP'.
+% FFP (feedforward projection) neuron meshes are downloaded by
+% Data_Processing/s03_FFP_FBP_mesh.ipynb into Processed_Data/fig2a_neuron_mesh_FFP.
+% (The FBP meshes live in fig4a_neuron_mesh_FBP and are plotted by fig_4A_FBP_neurons.m.)
 neuronDir     = fullfile(baseDir, 'Processed_Data', 'fig2a_neuron_mesh_FFP');
 neuronAlpha   = 1.0;
 neuronEdge    = 'none';

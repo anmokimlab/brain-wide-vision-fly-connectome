@@ -62,7 +62,7 @@ tempType = cell(n,1); tempIn = cell(n,1); tempOut = cell(n,1);
 parfor i = 1:n
     rid = rootIds(i);
     idx_consol = MCNSConsolidatedTypes.root_id == rid;
-    if any(idx_MCNSConsolidatedTypes), tempType{i} = MCNSConsolidatedTypes.primary_type{idx_consol}; else, tempType{i} = ''; end
+    if any(idx_consol), tempType{i} = MCNSConsolidatedTypes.primary_type{idx_consol}; else, tempType{i} = ''; end
 
     InConnections  = Connections(Connections.post_root_id == rid, :);
     OutConnections = Connections(Connections.pre_root_id  == rid, :);

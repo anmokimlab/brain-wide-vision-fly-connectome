@@ -82,7 +82,7 @@ Mi1_phi   = Mi1_Columns.phi;    % for background scatter
 %% Main loop
 all_BLP_by_type = struct();  % stores current_neurons per type
 
-for nt = 2:length(neuron_types)
+for nt = 1:length(neuron_types)
     type_name = neuron_types{nt};
     fprintf('Processing: %s\n', type_name)
 
